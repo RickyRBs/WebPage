@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Gallery</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #222;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #222;
+        }
+
+        header h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* 按钮与示例中BACK按钮风格统一 */
+        .btn {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            background: #444;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #555;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 0 10px 10px 10px; 
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            position: relative;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            height: 300px;
+            background: #000; 
+            overflow: hidden;
+        }
+
+        .gallery-item:nth-child(1) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.6s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.8s; }
+        .gallery-item:nth-child(5) { animation-delay: 1s; }
+        .gallery-item:nth-child(6) { animation-delay: 1.2s; }
+        .gallery-item:nth-child(7) { animation-delay: 1.4s; }
+        .gallery-item:nth-child(8) { animation-delay: 1.6s; }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            object-position: center;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+            font-size: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item:hover h3 {
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Online Gallery</h1>
+        <!-- 使用新的按钮样式 -->
+        <a class="btn" href="about.html">About YUXUAN ZHANG</a>
+    </header>
+    <section class="gallery">
+        <div class="gallery-item">
+            <a href="project1.html">
+                <img src="1.png" alt="Project 1: Lost & Found">
+                <h3>Project 1: Lost & Found</h3>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="project2.html">
+                <img src="2.png" alt="Project 2: Face Generator">
+                <h3>Project 2: Face Generator</h3>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="project3.html">
+                <img src="3.png" alt="Project 3: Drawing Board">
+                <h3>Project 3: Drawing Board</h3>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="project4.html">
+                <img src="4.png" alt="Project 4: Experimental Clock">
+                <h3>Project 4: Experimental Clock</h3>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="project5.html">
+                <img src="5.png" alt="Project 5: Exquisite Corpse">
+                <h3>Project 5: Exquisite Corpse</h3>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="project6.html">
+                <img src="6.png" alt="Project 6: Optical Illusion">
+                <h3>Project 6: Optical Illusion</h3>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="project7.html">
+                <img src="7.png" alt="Project 7: Data Portrait">
+                <h3>Project 7: Data Portrait</h3>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="project8.html">
+                <img src="8.png" alt="Project 8: Autobiographical Game">
+                <h3>Project 8: Autobiographical Game</h3>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
